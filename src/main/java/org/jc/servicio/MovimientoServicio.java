@@ -85,15 +85,15 @@ public class MovimientoServicio extends BaseSevicio<MovimientoEntidad, Long> {
 
     @SuppressWarnings("unchecked")
     public List<MovimientoEntidad> reporte(CuentaEntidad c, String desde, String hasta) throws ParseException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date fechaDesde = (Date) dateFormat.parse(desde);
         Date fechaHasta = (Date) dateFormat.parse(hasta);
         Query sql = movimientoRepositorio.getEntityManager().createQuery(
-                " Select p  from MovimientoEntidad p where p.idCuenta=:cuenta and p.fecha BETWEEN :fechaInicio AND :fechaFin order by p.idMovimiento ");
+                " Select p  from MovimientoEntidad p where p.idCuenta =:cuenta and  p.fecha BETWEEN :fechaDesde AND :fechaHasta order by p.idMovimiento ");
 
         sql.setParameter("cuenta", c);
-        sql.setParameter("fechaInicio", fechaDesde);
-        sql.setParameter("fechaFin", fechaHasta);
+        sql.setParameter("fechaDesde", fechaDesde);
+        sql.setParameter("fechaHasta", fechaHasta);
 
         List<MovimientoEntidad> movimientos = sql.getResultList();
 

@@ -47,7 +47,7 @@ public class MovimientoRecurso {
     
     @GET
     @Path("/reporte/{id}/{desde}/{hasta}")
-    public List<MovimientoEntidad> reporte( @PathParam("id") Long id, @PathParam("inicio") String desde, @PathParam("fin") String hasta) throws ParseException {
+    public List<MovimientoEntidad> reporte( @PathParam("id") Long id, @PathParam("desde") String desde, @PathParam("hasta") String hasta) throws ParseException {
         CuentaEntidad c = servicioC.buscarPorId(id);
         return servicio.reporte(c, desde, hasta);
     }
