@@ -1,3 +1,4 @@
+/*Jacer */
 package org.jc.recurso;
 
 import java.text.ParseException;
