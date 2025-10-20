@@ -11,6 +11,7 @@ Java 17
 Maven 3.9.11
 Postgres 17
 Postman v9.13.2
+bacuku base de datos basedatos.sql
 
 
 ## Ejecutar
