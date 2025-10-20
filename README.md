@@ -27,7 +27,7 @@ Ejecutar por terminal
  GET /cliente GET /cliente/{id} POST /cliente PUT /cliente/a/{id} DELETE /cliente/{id}
 ### Endpoints Cuenta:
  GET /cuenta GET /cuenta/{id} POST /cuenta PUT /cuenta/a/{id} DELETE /cuenta/{id}
-### Endpoints Movimineto:
+### Endpoints Movimiento:
  GET /movimiento GET /movimiento/retiro/{id}/{valor} GET /movimiento/deposito/{id}/{valor} GET /movimiento/reporte/{id}/{desde}/{hasta} POST /movimiento PUT /movimiento/a/{id} DELETE /movimiento/{id} 
 
 
